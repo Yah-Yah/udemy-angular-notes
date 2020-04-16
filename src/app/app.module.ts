@@ -18,6 +18,8 @@ import { AppComponent } from './app.component';
     FormsModule,
   ],
   providers: [],
+// 01-Basics_01_STEP_05 this is bootstrap array that lists all components that
+// should be known to the angular at the time of analysing index.html file.
   bootstrap: [AppComponent]
 })
 export class AppModule { }
