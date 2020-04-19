@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 // 01-Basics_02_STEP_10 We need to import our registered ServerComponent for
 // typeScript to be able to recognise it
 import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component';
 
 @NgModule({
 // 01-Basics_02_STEP_09 Register new components in 'declarations' array:
   declarations: [
     AppComponent,
-    ServerComponent
+    ServerComponent,
+    ServersComponent
   ],
 // 01-Basics_02_STEP_11 'imports' allow us to add more modules either from angular
 // packages or created by us when we split up our aplication into more modules
