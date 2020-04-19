@@ -7,11 +7,18 @@ import { FormsModule } from '@angular/forms';
 // This is only TYPESCRIPT import, it makes the module available for angular to import below
 
 import { AppComponent } from './app.component';
+// 01-Basics_02_STEP_10 We need to import our registered ServerComponent for
+// typeScript to be able to recognise it
+import { ServerComponent } from './server/server.component';
 
 @NgModule({
+// 01-Basics_02_STEP_09 Register new components in 'declarations' array:
   declarations: [
-    AppComponent
+    AppComponent,
+    ServerComponent
   ],
+// 01-Basics_02_STEP_11 'imports' allow us to add more modules either from angular
+// packages or created by us when we split up our aplication into more modules
   imports: [
     BrowserModule,
 // STEP_04: Import FormsModule for angular
@@ -23,3 +30,7 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// 01-Basics_02_STEP_08 app module is also a class with its own special decorator
+// @NgModule imported from angular 'core' package. We have 4 properties set up
+//  in the object passed into this decorator.
+// Now we need to add another component and register it in the app module
