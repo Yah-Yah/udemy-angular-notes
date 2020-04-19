@@ -8,10 +8,13 @@ import { Component } from '@angular/core';
 
 // 01-Basics_02_STEP_03 Add a Component decorator:
 @Component({
-// 01-Basics_02_STEP_05 Pass a javascript object into this decorator to configure it. These informations are stored as metadata for the class, it'll tell angular what to do with this class.
-// 01-Basics_02_STEP_06 selector is an html tag that alows to use THIS component in other components
-selector: 'app-server', // typically selector of component comes with an 'app-' prefix and a unique name of the component
-templateUrl: './server.component.html', // this relative path points to an external template file html
+// 01-Basics_02_STEP_05 Pass a javascript object into this decorator to configure
+// it. These informations are stored as metadata for the class, it'll tell
+// angular what to do with this class.
+// 01-Basics_02_STEP_06 selector is an html tag that alows to use THIS component
+// in other components
+  selector: 'app-server', // typically selector of component comes with an 'app-' prefix and a unique name of the component
+  templateUrl: './server.component.html', // this relative path points to an external template file html
 })
 export class ServerComponent {
   // 01-Basics_02_STEP_02 Make angular know that this is not a regular class:
