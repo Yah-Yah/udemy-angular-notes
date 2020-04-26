@@ -1,1 +1,14 @@
-<p>One server component</p>
+<!-- STEP_01: STRING INTERPOLATION
+  When we need to output dynamic data in for example these fields: -->
+<!-- <p>Server with ID ___ is ___</p> -->
+<!-- STEP_03: String interpolation syntax: {{ typescript expression }}
+     Simpliest expression is to reference a property:         -->
+<p>Server with ID {{serverId}} is {{serverStatus}}</p>
+<!-- This is the most common use, but it's not unique: anything that ends with
+string expression is also fine. For example:
+<p>Server with ID {{ '11' }} is {{ 'online' }}</p>
+as well as calling a method that returns a string in the end:-->
+<p>Server with ID {{ addition(serverId,1) }} is {{ getServerStatus() }}</p>
+<!-- The only restriction is it can't be multiline block expression.
+serverId is of type number but it's automaticaly converted to a string in string
+interpolation.-->
