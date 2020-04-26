@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Notes:
+Databinding == communication.
+It's a communication between typescript of component and template (html).
+Different ways of communication:
+1. Output (form typescript into html template) with:
+* String interploation: {{ data }}
+* Property binding: [property]="data"
+2. Input (ie: when user clicks on a button -> trigger something in typescript code):
+* Event binding: (event)="expression"
+3. Combination of both Output & Input:
+* Two-way-binding: [(ngModel)]="data"
+
+## String interpoltion and Property binding
+String interpoltion: For outputting some text `{{ outputted text }}`
+Property binding: For changing some property either of html element or directive or a component `[property]="value"`
