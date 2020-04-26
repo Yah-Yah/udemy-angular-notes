@@ -1,2 +1,25 @@
+<!-- STEP_04 PROPERTY BINDING
+For example we want to alow users to add new servers, we add a disabled (for now) button: -->
+<!-- <button class="btn btn-primary" disabled>Add server</button> -->
+
+<!-- STEP_08 by wrapping [disabled] attribute in square brackets we make
+  a property binding - dynamicaly bind some property to it.
+  What we did here is we binded this html native attribute to a property we
+  set up earlier in typescript file, which convey boolean value which then is
+  binded to the attribute here. So while initially disallowNewServer property
+  is set to true it makes the 'disabled' attribute work, but after the property
+  changes into false (in 2 seconds delay) it disables the attribute and hence
+  enables button to work -->
+<button class="btn btn-primary" [disabled]="disallowNewServer">Add server</button>
+<!-- STEP_09 Property binding can be conbined with string interpolation -->
+<p>{{ disallowNewServer }}</p>
+<!-- STEP_10 And String interpolation can be replaced with  Property binding: -->
+<p [innerHtml]="disallowNewServer"></p>
+
 <app-server></app-server>
 <app-server></app-server>
+
+<!-- NOTES:
+By binding typescript property to a DOM element we dynamicaly convey it's value
+into that element.
+We can also bind to dierctives and components (will be covered later) -->
